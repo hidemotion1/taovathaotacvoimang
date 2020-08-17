@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo và thao tác với mảng</title>
+</head>
+<body>
+<input type="number" id="list">
+<button type="submit" onclick="add()" id="submit">Submit here</button>
+<button type="button" onclick="show()" id="show">Show list</button>
+<div id="result"></div>
+<script>
+    let i=0;
+    let list=Array();
+    function add() {
+        list[i]= document.getElementById('list').value;
+        i++;
+        document.getElementById('list').value="";
+    }
+    function show() {
+        for (let x = 0; x< list.length;x++){
+            document.getElementById('result').innerText +='thành phần thứ ' + (x+1) + '=' + list[x] +'; ';
+        }
+    }
+</script>
+</body>
+</html>
